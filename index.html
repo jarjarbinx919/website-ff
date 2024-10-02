@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Adelaide Flutter Developer</title>
+    <title>Adelaide App Services</title>
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
@@ -14,25 +14,37 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">ADELAIDE APP SERVICES</h1>
-            <ul class="nav-links">
-                <li><a href="#highlight">Why Choose Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>    
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <h1 class="logo">ADELAIDE APP SERVICES</h1>
+        <ul class="nav-links">
+            <li><a href="#highlight">Why Choose Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#" id="openModalHeader">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <h2 class="headline">App Development & Maintenance made easy</h2>
-            <p class="subheadline">Offering High-Quality, Adelaide Development Services</p>
-            <a href="#highlight" class="cta-button">Get Started</a>
-        </div>
-    </header>
+<!-- Hero Section -->
+<header class="hero">
+    <div class="container">
+        <h2 class="headline">App Development & Maintenance made easy</h2>
+        <p class="subheadline">Offering High-Quality, Local Adelaide Development Services</p>
+        <button id="openModalHero" class="cta-button">Get in Touch</button>
+    </div>
+</header>
+
+<!-- Modal for Contact Details -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact Information</h2>
+        <p>Send us a brief explanation of your app idea to get the conversation going! Chat soon.</p>
+        <p><strong>Phone:</strong> <a href="tel:+61449868224">0449 868 224</a></p>
+        <p><strong>Email:</strong> <a href="mailto:jaredflutter@gmail.com">jaredflutter@gmail.com</a></p>
+    </div>
+</div>
 
     <!-- Flashy Highlight Section -->
     <section id="highlight" class="highlight-section">
@@ -46,7 +58,7 @@
                 </div>
                 <div class="highlight-card">
                     <h3>Extremely Low Prices</h3>
-                    <p>Get premium development services for 40% less than the average Adelaide developer. All work is done locally, with no outsourcing.</p>
+                    <p>Get premium development services for less than the average Australian developer. All work is done locally, with no outsourcing.</p>
                     <div class="highlight-icon">💰</div>
                 </div>
             </div>
@@ -65,7 +77,7 @@
                 </div>
                 <div class="highlight-card">
                     <h3>App Maintenance</h3>
-                    <p>Comprehensive app maintenance at a competitive $2000/month, including 10 hours of bug fixing and optimizations.</p>
+                    <p>Comprehensive app maintenance at a competitive $1000/month, including 10 hours of bug fixing and optimizations.</p>
                     <div class="highlight-icon">🛠️</div>
                 </div>
             </div>
@@ -74,11 +86,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <p><strong>Phone:</strong> <a href="tel:+61449868224">0449 868 224</a></p>
-            <p><strong>Email:</strong> <a href="mailto:jaredpw01@gmail.com">jaredflutter@gmail.com</a></p>
-        </div>
+
     </section>
 
     <!-- Footer -->
@@ -86,4 +94,37 @@
         <p>2024 Adelaide Flutter App Developer | Locally Developed, Never Outsourced</p>
     </footer>
 </body>
+<script>
+    // Get modal element
+    var modal = document.getElementById("contactModal");
+
+    // Get the buttons that open the modal
+    var btnHero = document.getElementById("openModalHero");
+    var btnHeader = document.getElementById("openModalHeader");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the buttons, open the modal
+    btnHero.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    btnHeader.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+</script>
 </html>
